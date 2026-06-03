@@ -1,0 +1,551 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #f8f4ec;
+    background:
+linear-gradient(rgba(7, 11, 29, 0.55), rgba(7, 11, 29, 0.65)),
+url("../img/lunisa-background.png");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+/*Üst alan*/
+header {
+    padding: 22px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8, 12, 30, 0.78);
+    backdrop-filter: blur(6px);
+}
+/* Marka adı */
+header h1 {
+    margin:0;
+    font-size: 42px;
+    letter-spacing: 8px;
+}
+/* Menü */
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 28px;
+}
+/* Menü linkleri */
+nav a {
+    color: #f8f4ec;
+    text-decoration: none;
+    font-size: 17px;
+}
+nav a:hover {
+    color: #39d6d6;
+}
+/* Ana içerik alanı */
+main {
+    min-height: 75vh;
+    padding: 70px;
+}
+/* Ana slogan alanı */
+.hero {
+    max-width: 850px;
+ margin: 0 auto;
+    padding: 80px 55px;
+    background: rgba(8, 12, 30, 0.55);
+    border: 1px solid rgba(212, 175, 95, 0.35);
+    border-radius: 28px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+.hero h2 {
+    font-size: 46px;
+    margin-top: 0;
+    margin-bottom: 28px;
+    line-height: 1.25;
+}
+/* Paragraflar */
+.hero p {
+font-size: 20px;
+line-height: 1.8;
+}
+/* Koleksiyonu incele linki */
+.hero a {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 14px 34px;
+    background: #39d6d6;
+    color: #0b1026;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+/* Kategori alanı */
+.categories {
+    margin-top: 80px;
+}
+/* Kategori başlığı */
+.categories h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+/* Kartları yan yana dizer */
+.category-list {
+    display: flex;
+    gap: 25px;
+}
+/* Kategori kartları */
+.category-card {
+    width: 33.33%;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(57, 214, 214, 0.35);
+    border-radius: 24px;
+    min-height: 190px;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.category-card:hover {
+    border-color: #39d6d6;
+    transform: translateY(-5px);
+}
+/* Kategori kart başlıkları */
+.category-card h3 {
+    margin-top: 0;
+    color: #39d6d6;
+    font-size: 26px;
+}
+.category-card p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+.category-button {
+    display: inline-block;
+    margin-top: 15px;
+    color: #39d6d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+.category-button:hover {
+    color: #f8f4ec;
+}
+/* Alt bilgi */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(8, 12, 30, 0.78);
+    backdrop-filter: blur(6px);
+}
+/* Ürünler sayfası giriş alanı */
+.products-intro {
+    max-width: 900px;
+    margin-bottom: 50px;
+}
+.products-intro h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+.products-intro p {
+    font-size: 19px;
+    line-height: 1.7;
+}
+/* Ürün kartlarınının bulunduğu alan */
+.product-list {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+/* Ürün kartı */
+.product-card {
+    width: 31%;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(57, 214, 214, 0.35);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+/* Ürün kartının üzerine gelince */
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #39d6d6;
+}
+/*Geçici ürün görsel alanı */
+.product-image {
+    height: 180px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    background:rgba(57, 214, 214, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #39d6d6;
+    font-size: 24px;
+    font-weight: bold;
+}
+.product-image-box {
+    width: 100%;
+    height: 270px;
+    background: #f3ede6;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.product-img {
+max-width: 100%;
+max-height: 100%;
+width: auto;
+height: auto;
+object-fit: contain;
+display: block;
+}
+/* Ürün adı */
+.product-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+/*Ürün açıklaması */
+.product-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Fiyat */
+.product-card span {
+    display: block;
+    margin: 18px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #39d6d6;
+}
+/* Detay linki */
+.product-card a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #39d6d6;
+    border-radius: 20px;
+color: #f8f4ec;
+text-decoration: none;
+font-weight: bold;
+transition: 03.s;
+}
+.product-card a:hover {
+    background: rgba(57, 214, 214, 0.12);
+    color: #39d6d6;
+}
+/* Sepete ekle butonu */
+.product-card button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #39d6d6;
+    color: #0b1026;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 0;
+}
+/* Buton üzerine gelince */
+.product-card button:hover {
+    background: #f8f4ec;
+}
+/* Ürün detray sayfası */
+.detail-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(57, 214, 214, 0.35);
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+/* Ürün detay görsel alanı */
+.detail-image {
+    width: 40%;
+    min-height: 420px;
+    border-radius: 24px;
+    background: rgba(57, 214, 214, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #39d6d6;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+} 
+.detail-img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    border-radius: 20px;
+    background: #f3ede6;
+    padding: 12px;
+}
+/* Ürün detay bilgi alanı */
+.detail-info {
+    width: 60%;
+}
+.detail-info h2 {
+font-size: 40px;
+margin-top: 0;
+}
+.detail-info h3 {
+    margin-top: 28px;
+    color: #39d6d6;
+}
+.detail-info p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+.price {
+    color: #39d6d6;
+    font-size: 26px;
+    font-weight: bold;
+}
+.detail-info li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.detail-info button {
+    margin-top: 25px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 25px;
+    background: #39d6d6;
+    color: #0b1026;
+    font-weight: bold;
+    cursor: pointer; 
+}
+.detail-info button:hover {
+    background: #f8f4ec;
+}
+/* Sepet sayfası */
+.cart-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(57, 214, 214, 0.35);
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.cart-box h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.cart-item,
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(248, 244, 236, 0.18);
+}
+.cart-item p,
+.cart-total p {
+    margin: 0;
+    font-size: 18px;
+}
+.cart-item span, 
+.cart-total span {
+    color: #39d6d6;
+    font-weight: bold;
+    font-size: 18px;
+}
+.cart-total {
+    margin-top: 20px;
+    border-bottom: none;
+}
+.cart-total p,
+.cart-total span {
+    font-size: 22px;
+}
+.cart-box button {
+    margin-top: 30px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 25px;
+    background: #39d6d6;
+    color: #0b1026;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cart-box button:hover {
+    background: #f8f4ec;
+}
+/* İletişim sayfası */
+.contact-box {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(57, 214, 214, 0.35);
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.contact-box h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.contact-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-box label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.contact-box input,
+.contact-box textarea {
+    padding: 13px;
+    border: 1px solid rgba(57, 214, 214, 0.35);
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 15px;
+    outline: none;
+}
+.contact-box input:focus,
+.contact-box textarea:focus {
+    border-color: #39d6d6;
+}
+.contact-box button {
+    margin-top: 25px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 25px;
+    background: #39d6d6;
+    color: #0b1026;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contact-box button:hover {
+    background: #f8f4ec;
+}
+/* Mobil uyumlu tasarım*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+    main {
+        padding: 35px 20px;
+    }
+    .hero {
+        padding: 30px;
+    }
+    .hero h2 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .category-list { 
+        flex-direction: column;
+    }
+    .category-card {
+        width: 100%;
+    }
+    .product-list {
+        flex-direction: column;
+    }
+    .product-card {
+        width: 100%;
+    }
+    .detail-card {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .detail-image {
+        width: 100%;
+        min-height: 260px;
+    }
+    .detail-info {
+        width: 100%;
+    }
+    .detail-info h2 {
+        font-size: 32px;
+    }
+    .cart-box,
+    .contact-box {
+        padding: 30px;
+    }
+}
+/* Lunisa Stil Testi */
+.quiz-box {
+    max-width: 750px;
+    margin:  80px auto 0;
+    padding: 40px;
+    background: rgba(8, 12, 30, 0.55);
+    border: 1px solid rgba(212, 175, 95, 0.35);
+    border-radius: 28px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.quiz-box h2 {
+    font-size: 32px;
+    margin-top: 0;
+}
+.quiz-box p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.quiz-box button,
+.quiz-option {
+    margin-top: 15px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    background: #39d6d6;
+    color: #0b1026;
+    font-weight: bold;
+    cursor: pointer;
+}
+.quiz-box button:hover,
+.quiz-option:hover {
+    background: #f8f4ec;
+}
+#quizOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+#quizResult {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #f8f4ec;
+    font-weight: bold;
+}
+#quizResult a {
+    color: #39d6d6;
+    text-decoration: none;
+}
+.hidden {
+    display: none;
+}
